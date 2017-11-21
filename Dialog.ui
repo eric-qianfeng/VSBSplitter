@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>582</width>
+    <height>375</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>VSB File Splitter</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="toolTip">
+          <string>The file will be splitted</string>
+         </property>
+         <property name="text">
+          <string>&amp;VSB File:</string>
+         </property>
+         <property name="buddy">
+          <cstring>m_pEditFileFullName</cstring>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="m_pEditFileFullName"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="m_pBtnBrowser">
+         <property name="maximumSize">
+          <size>
+           <width>75</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Browser...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Split Type:</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QRadioButton" name="m_pRadioMaxSize">
+              <property name="text">
+               <string>Max File Size(M):</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="m_pEditMaxFileSize">
+              <property name="text">
+               <string>1000</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QRadioButton" name="m_pRadioNumberMsg">
+              <property name="text">
+               <string>Number of message per VSB:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="m_pEditNumberMsgs">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>500000</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="m_pBtnSplit">
+         <property name="font">
+          <font>
+           <pointsize>13</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string>Start to split the VSB File</string>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"> QPushButton{ color: rgb(85, 170, 255); background-color:rgb(0, 255, 0);}</string>
+         </property>
+         <property name="text">
+          <string>&amp;Split 
+VSB</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="default">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QProgressBar" name="m_pPrgPrompt">
+       <property name="value">
+        <number>0</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListWidget" name="m_pListPrompt"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

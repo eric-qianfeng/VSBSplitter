@@ -1,0 +1,5 @@
+VSBSplitter.iss
+build/
+Output/
+**/*.pro.*
+
